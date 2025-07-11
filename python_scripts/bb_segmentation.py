@@ -40,14 +40,17 @@ def process_image_noresize(image_path):
   # Convert to numpy array for TensorFlow
   img_array = np.array(img)
 
-  return img_array
+  return img_array/255
 
 def cnn(input_shape):
   model = tf.keras.Sequential()
   model.add(tf.keras.layers.Input(shape=input_shape))
-  model.add(tf.keras.layers.Conv1D(4, 3, activation='relu', input_shape=input_shape))
+  model.add(tf.keras.layers.Conv2D(4, (3, 3), activation='relu', input_shape=input_shape))
+  model.add(tf.keras.layers.MaxPooling2D((2, 2)))
+  model.add(tf.keras.layers.Conv2D(8, (3, 3), activation='relu', input_shape=input_shape))
+  model.add(tf.keras.layers.MaxPooling2D((2, 2)))
   model.add(tf.keras.layers.Flatten())
-  model.add(tf.keras.layers.Dense(100, activation='relu'))
+  model.add(tf.keras.layers.Dense(64, activation='relu'))
   model.add(tf.keras.layers.Dense(32, activation='relu'))
   model.add(tf.keras.layers.Dense(16, activation='relu'))
   model.add(tf.keras.layers.Dense(4))
@@ -125,12 +128,12 @@ if __name__ == "__main__":
         if file_path.is_file():
             # print(file_path)
             img_array = process_image_noresize(file_path)
-            print(img_array)
+            # print(img_array)
             input_array.append(img_array)
             # print(f"input shape: {img_array.shape}")
             input_shape = img_array.shape
     
-    model = cnn(input_shape)
+    model = cnn((600, 400, 1))
     model.summary()
     model.compile(optimizer=tf.keras.optimizers.Adam(),loss=tf.keras.losses.MeanSquaredError)
 
@@ -143,7 +146,7 @@ if __name__ == "__main__":
       Y[i] = annot_dict[key]
     print(input_array.shape)
     train_dataset = tf.data.Dataset.from_tensor_slices((train_array, Y))
-    train_dataset = train_dataset.batch(1)
-    history = model.fit(train_dataset, epochs=30)
+    train_dataset = train_dataset.batch(10)
+    history = model.fit(train_dataset, epochs=100)
 
     inference(model)
