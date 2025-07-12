@@ -1,86 +1,23 @@
 [
     {
         "name": "original_scans/Reel169/ViewScan_010000.tif",
-        "x": 33,
+        "x": 224,
         "y": 0,
-        "width": 250,
-        "height": 585
+        "width": 1594,
+        "height": 1892
     },
     {
         "name": "original_scans/Reel169/ViewScan_010007.tif",
-        "x": 42,
+        "x": 275,
         "y": 0,
-        "width": 328,
+        "width": 2119,
         "height": 600
     },
     {
         "name": "original_scans/Reel169/ViewScan_010010.tif",
-        "x": 80,
+        "x": 524,
         "y": 0,
-        "width": 320,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_010018.tif",
-        "x": 53,
-        "y": 0,
-        "width": 326,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_030014.tif",
-        "x": 58,
-        "y": 0,
-        "width": 326,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_090004.tif",
-        "x": 18,
-        "y": 0,
-        "width": 328,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_220006.tif",
-        "x": 16,
-        "y": 0,
-        "width": 365,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_270003.tif",
-        "x": 18,
-        "y": 0,
-        "width": 350,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_310001.tif",
-        "x": 20,
-        "y": 0,
-        "width": 320,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_330006.tif",
-        "x": 43,
-        "y": 0,
-        "width": 335,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_400000.tif",
-        "x": 10,
-        "y": 0,
-        "width": 330,
-        "height": 600
-    },
-    {
-        "name": "original_scans/Reel169/ViewScan_460004.tif",
-        "x": 45,
-        "y": 0,
-        "width": 307,
+        "width": 2068,
         "height": 600
     }
 ]
